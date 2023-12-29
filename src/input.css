@@ -1,7 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.item .activeIcon{
+  @apply hidden;
+}
 
+.item.active .inactiveIcon{
+  @apply hidden;
+}
+
+.item.active .activeIcon{
+  @apply block;
+}
+
+.item:not(.active) .content{
+  @apply h-0 overflow-hidden py-0;
+}
+
+.item .content{
+  @apply px-8;
+}
+
+.recipesCard {
+  @apply text-black text-sm font-montserrat font-normal transition-all duration-500 cursor-pointer
+}
+
+.recipesContent {
+  @apply py-3 hover:text-secondary;
+}
+
+.dropdown:hover .dropdown-menu {
+  @apply block;
+}
+
+.cardImages {
+  @apply bg-cover bg-center object-cover w-full h-24 md:h-44 rounded-2xl pl-7 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-700
+}
