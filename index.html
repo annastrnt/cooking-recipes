@@ -18,38 +18,35 @@
   <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
   <header>
     <nav>
-      <div class="mx-auto py-4 max-w-7xl">
-        <div class="relative flex flex-row justify-between ">
+      <div class="mx-auto py-4 max-w-7xl px-10">
+        <div class="flex flex-row justify-between ">
           <div class="flex flex-row justify-between gap-20 items-center">
             <div>
-              <a href="#" class="text-2xl font-leckerli text-secondary">Cooking Recipes</a>
+              <a href="index.html" class="text-2xl font-leckerli text-secondary">Cooking Recipes</a>
             </div>
-            <div class="mx-auto py-14">
+            <div class="mx-auto py-14 lg:block hidden">
               <ul class="flex flex-col md:flex-row text-center gap-8">
                 <li>
-                  <a href="#home" class="font-montserrat text-primary font-medium text-xs hover:text-secondary ease-in duration-200">Home</a>
+                  <a href="index.html" class="font-montserrat text-primary font-medium text-xs hover:text-secondary ease-in duration-200">Home</a>
                 </li>
                 <li>
-                  <a href="#recipe" class="font-montserrat text-primary font-medium text-xs hover:text-secondary ease-in duration-200">Recipe</a>
+                  <a href="recipe.html" class="font-montserrat text-primary font-medium text-xs hover:text-secondary ease-in duration-200">Recipe</a>
                 </li>
                 <li>
-                  <a href="#search" class="font-montserrat text-primary font-medium text-xs hover:text-secondary ease-in duration-200">Search</a>
+                  <a href="search.html" class="font-montserrat text-primary font-medium text-xs hover:text-secondary ease-in duration-200">Search</a>
                 </li>
                 <li>
-                  <a href="#contact" class="font-montserrat text-primary font-medium text-xs hover:text-secondary ease-in duration-200">Contact</a>
+                  <a href="contact.html" class="font-montserrat text-primary font-medium text-xs hover:text-secondary ease-in duration-200">Contact</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="flex flex-row justify-between gap-5 items-center">
-              <div>
-                <i class="ri-search-line ri-lg text-primary"></i>
-              </div>
             <div class="flex flex-row gap-5">
-              <button class="hidden md:block text-primary text-xs font-montserrat font-medium px-7 hover:text-secondary">
+              <button class="hidden lg:block text-secondary text-xs font-montserrat font-medium px-7 hover:text-[#eb2007] border-2 border-secondary hover:boerder-[#eb2007] rounded-full">
                 Sign In
               </button>
-              <button class="bg-secondary hover:bg-[#eb2007] text-white text-xs font-montserrat font-medium py-2 px-7 rounded-full">
+              <button class="hidden lg:block bg-secondary hover:bg-[#eb2007] text-white text-xs font-montserrat font-medium py-2 px-7 rounded-full">
                 Sign Up
               </button>
               <div class="md:hidden">
@@ -64,25 +61,476 @@
 
   <main>
     <!--~~~~~~~~~~~~~~~ Banner ~~~~~~~~~~~~~~~-->
-    <div class="mx-auto py-4 max-w-7xl">
-      <div class="relative bg-cover bg-center">
-        <div class="absolute w-full opacity-90 z-10">
-          <img src="/dist/img/banner.jpg" alt="" class="rounded-3xl object-cover h-[500px] w-full object-top" height="1000px">
-        </div>
-        <div class="absolute top-0 left-0 max-w-xl px-14 py-24 z-50">
-          <h1 class="text-[52px] text-white font-montserrat font-semibold leading-tight">Choose from thousands of recipes</h1>
-          <p class="text-base text-white font-montserrat font-normal leading-normal py-5">Appropriately integrate technically sound value with scalable infomediaries
-            negotiate sustainable strategic theme areas</p>
-            <div class="flex flex-row items-center gap-5">
-              <a href="#" class="text-white text-base font-montserrat font-normal">Sign up today</a>
-              <i class="ri-arrow-right-line text-white"></i>
+    <section>
+      <div class="mx-auto max-w-7xl px-10">
+          <div class="relative">
+            <div class="bg-cover object-cover z-10 opacity-90 rounded-3xl h-[250px] md:h-[300px] lg:h-[480px]" style="background-image: url(/dist/img/banner.jpg)">
+              <div class="absolute h-full grid md:grid-cols-1 lg:grid-cols-2 items-center z-50">
+                <div class="py-4 pl-4 lg:py-14 lg:pl-14 min-w-[25%] lg:min-w-[75%]">
+                  <h1 class="text-[42px] lg:text-[52px] text-white font-montserrat font-semibold leading-tight">Choose from thousands of recipes</h1>
+                  <p class="text-base text-white font-montserrat font-normal leading-normal py-5">Appropriately integrate technically sound value with scalable infomediaries
+                    negotiate sustainable strategic theme areas</p>
+                    <div class="flex flex-row items-center gap-5">
+                      <a href="#" class="text-white text-base font-montserrat font-medium">Sign up today</a>
+                      <i class="ri-arrow-right-line ri-md text-white"></i>
+                    </div>
+                </div>
+              </div>
+              <div></div>
             </div>
+          </div>
+      </div>
+    </section>
+
+    <!--~~~~~~~~~~~~~~~ Content ~~~~~~~~~~~~~~~-->
+    <section>
+      <div class="mx-auto py-4 max-w-7xl px-10">
+        <div class="flex lg:flex-row flex-col w-full gap-8 justify-center mt-5">
+          <div class="">
+            <h1 class="text-black text-3xl font-semibold font-montserrat">Recipes</h1>
+              <ul id="accordion">
+                <li class="item mt-8">
+                  <div class="header flex flex-row items-center justify-between cursor-pointer">
+                    <a href="#" class="item text-black text-base font-montserrat font-medium">Dish Type</a>
+                    <i class="ri-subtract-line activeIcon"></i>
+                    <i class="ri-add-line inactiveIcon"></i>
+                  </div>
+                  <ul class="content recipesCard">
+                    <li class="recipesContent">Appetizers & Snacks</li>
+                    <li class="recipesContent">Bread Recipes</li>
+                    <li class="recipesContent">Cake Recipes</li>
+                    <li class="recipesContent">Candy and Fudge</li>
+                    <li class="recipesContent">Casserole Recipes</li>
+                    <li class="recipesContent">Christmas Cookies</li>
+                    <li class="recipesContent">Cocktail Recipes</li>
+                    <li class="recipesContent">Main Dishes</li>
+                    <li class="recipesContent">Pasta Recipes</li>
+                    <li class="recipesContent">Pie Recipes</li>
+                    <li class="recipesContent">Sandwiches</li>
+                  </ul>
+                </li>
+
+                <li class="item mt-8">
+                  <div class="header flex flex-row items-center justify-between cursor-pointer">
+                    <a href="#" class="item text-black text-base font-montserrat font-medium">Meal Type</a>
+                    <i class="ri-subtract-line activeIcon"></i>
+                    <i class="ri-add-line inactiveIcon"></i>
+                  </div>
+                  <ul class="content recipesCard">
+                    <li class="recipesContent">Breakfast and Brunch</li>
+                    <li class="recipesContent">Desserts</li>
+                    <li class="recipesContent">Dinners</li>
+                    <li class="recipesContent">Lunch</li>
+                  </ul>
+                </li>
+
+                <li class="item mt-8">
+                  <div class="header flex flex-row items-center justify-between cursor-pointer">
+                    <a href="#" class="item text-black text-base font-montserrat font-medium">Diet and Health</a>
+                    <i class="ri-subtract-line activeIcon"></i>
+                    <i class="ri-add-line inactiveIcon"></i>
+                  </div>
+                  <ul class="content recipesCard">
+                    <li class="recipesContent">Diabetic</li>
+                    <li class="recipesContent">Gluten Free</li>
+                    <li class="recipesContent">High Fiber Recipes</li>
+                    <li class="recipesContent">Low Calorie</li>
+                  </ul>
+                </li>
+
+                <li class="item mt-8">
+                  <div class="header flex flex-row items-center justify-between cursor-pointer">
+                    <a href="#" class="item text-black text-base font-montserrat font-medium">World Cuisine</a>
+                    <i class="ri-subtract-line activeIcon"></i>
+                    <i class="ri-add-line inactiveIcon"></i>
+                  </div>
+                  <ul class="content recipesCard">
+                    <li class="recipesContent">Chinese</li>
+                    <li class="recipesContent">Indian</li>
+                    <li class="recipesContent">Italian</li>
+                    <li class="recipesContent">Mexican</li>
+                  </ul>
+                </li>
+
+                <li class="item mt-8">
+                  <div class="header flex flex-row items-center justify-between cursor-pointer">
+                    <a href="#" class="item text-black text-base font-montserrat font-medium">Seasonal</a>
+                    <i class="ri-subtract-line activeIcon"></i>
+                    <i class="ri-add-line inactiveIcon"></i>
+                  </div>
+                  <ul class="content recipesCard">
+                    <li class="recipesContent">Baby Shower</li>
+                    <li class="recipesContent">Birthday</li>
+                    <li class="recipesContent">Christmas</li>
+                    <li class="recipesContent">Halloween</li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+          <!--~~~~~~~~~~~~~~~ Search bar ~~~~~~~~~~~~~~~-->
+          <div class="relative w-full">
+            <div class="grid md:grid-cols-3 items-center gap-5">
+              <div class="col-span-2">
+                <div class="justify-center items-center">
+                    <div class="relative">
+                      <div class="absolute top-4 right-3">
+                          <i class="ri-search-line ri-lg text-gray-400 z-20 hover:text-gray-500 "></i>
+                      </div>
+                        <input type="text" class="text-sm font-montserrat font-normal h-14 pr-8 pl-5 rounded-lg z-0 focus:shadow focus:outline-none bg-neutral-100 w-full" placeholder="Search for recipes...">
+                    </div>
+                </div>
+            </div>
+            <!--~~~~~~~~~~~~~~~ Dropdown menu ~~~~~~~~~~~~~~~-->
+            <div class="md:absolute right-0 max-w-full">
+              <button class="text-white bg-secondary font-medium rounded-full font-montserrat text-sm px-4 py-2 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">Short by: Latest<i class="ri-expand-up-down-fill"></i></button>
+              <div class="hidden bg-secondary text-base z-50 list-none divide-y rounded shadow my-4" id="dropdown">
+                  <ul class="py-1" aria-labelledby="dropdown">
+                  <li>
+                      <a href="#" class="text-sm text-white block px-4 py-2">Short by: Trending</a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-sm text-white block px-4 py-2">Short by: Top Rated</a>
+                  </li>
+                  </ul>
+              </div>
+            </div>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-3 py-3 mx-auto gap-10">
+              <a href="recipe.html">
+                <div class="flex flex-col">
+                    <div class="cardImages" style="background-image: url(https://source.unsplash.com/-YHSwy6uqvk/300x160)">
+                    </div>
+                    <div class="pt-5">
+                      <h1 class="text-base text-primary font-montserrat font-medium">Chef John's Turkey Sloppy Joes</h1>
+                    </div>
+                    <div class="flex flex-row pt-3 items-center justify-between">
+                      <div class="flex flex-row gap-1 items-center">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <div class="font-montserrat font-normal text-xs text-primary">
+                          <span>5.0</span>
+                          <span>(73)</span>
+                        </div>
+                      </div>
+                      <div class="font-montserrat font-normal text-xs text-primary">
+                        <span>by John Keller</span>
+                      </div>
+                    </div>
+                </div>
+              </a>
+
+              <a href="recipe.html">
+                <div class="flex flex-col">
+                    <div class="cardImages" style="background-image: url(https://source.unsplash.com/-YHSwy6uqvk/300x160)">
+                    </div>
+                    <div class="pt-5">
+                      <h1 class="text-base text-primary font-montserrat font-medium">Chef John's Turkey Sloppy Joes</h1>
+                    </div>
+                    <div class="flex flex-row pt-3 items-center justify-between">
+                      <div class="flex flex-row gap-1 items-center">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <div class="font-montserrat font-normal text-xs text-primary">
+                          <span>5.0</span>
+                          <span>(73)</span>
+                        </div>
+                      </div>
+                      <div class="font-montserrat font-normal text-xs text-primary">
+                        <span>by John Keller</span>
+                      </div>
+                    </div>
+                </div>
+              </a>
+
+              <a href="recipe.html">
+                <div class="flex flex-col">
+                    <div class="cardImages" style="background-image: url(https://source.unsplash.com/-YHSwy6uqvk/300x160)">
+                    </div>
+                    <div class="pt-5">
+                      <h1 class="text-base text-primary font-montserrat font-medium">Chef John's Turkey Sloppy Joes</h1>
+                    </div>
+                    <div class="flex flex-row pt-3 items-center justify-between">
+                      <div class="flex flex-row gap-1 items-center">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <div class="font-montserrat font-normal text-xs text-primary">
+                          <span>5.0</span>
+                          <span>(73)</span>
+                        </div>
+                      </div>
+                      <div class="font-montserrat font-normal text-xs text-primary">
+                        <span>by John Keller</span>
+                      </div>
+                    </div>
+                </div>
+              </a>
+
+              <a href="recipe.html">
+                <div class="flex flex-col">
+                    <div class="cardImages" style="background-image: url(https://source.unsplash.com/-YHSwy6uqvk/300x160)">
+                    </div>
+                    <div class="pt-5">
+                      <h1 class="text-base text-primary font-montserrat font-medium">Chef John's Turkey Sloppy Joes</h1>
+                    </div>
+                    <div class="flex flex-row pt-3 items-center justify-between">
+                      <div class="flex flex-row gap-1 items-center">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <div class="font-montserrat font-normal text-xs text-primary">
+                          <span>5.0</span>
+                          <span>(73)</span>
+                        </div>
+                      </div>
+                      <div class="font-montserrat font-normal text-xs text-primary">
+                        <span>by John Keller</span>
+                      </div>
+                    </div>
+                </div>
+              </a>
+
+              <a href="recipe.html">
+                <div class="flex flex-col">
+                    <div class="cardImages" style="background-image: url(https://source.unsplash.com/-YHSwy6uqvk/300x160)">
+                    </div>
+                    <div class="pt-5">
+                      <h1 class="text-base text-primary font-montserrat font-medium">Chef John's Turkey Sloppy Joes</h1>
+                    </div>
+                    <div class="flex flex-row pt-3 items-center justify-between">
+                      <div class="flex flex-row gap-1 items-center">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <div class="font-montserrat font-normal text-xs text-primary">
+                          <span>5.0</span>
+                          <span>(73)</span>
+                        </div>
+                      </div>
+                      <div class="font-montserrat font-normal text-xs text-primary">
+                        <span>by John Keller</span>
+                      </div>
+                    </div>
+                </div>
+              </a>
+
+              <a href="recipe.html">
+                <div class="flex flex-col">
+                    <div class="cardImages" style="background-image: url(https://source.unsplash.com/-YHSwy6uqvk/300x160)">
+                    </div>
+                    <div class="pt-5">
+                      <h1 class="text-base text-primary font-montserrat font-medium">Chef John's Turkey Sloppy Joes</h1>
+                    </div>
+                    <div class="flex flex-row pt-3 items-center justify-between">
+                      <div class="flex flex-row gap-1 items-center">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <div class="font-montserrat font-normal text-xs text-primary">
+                          <span>5.0</span>
+                          <span>(73)</span>
+                        </div>
+                      </div>
+                      <div class="font-montserrat font-normal text-xs text-primary">
+                        <span>by John Keller</span>
+                      </div>
+                    </div>
+                </div>
+              </a>
+
+              <a href="recipe.html">
+                <div class="flex flex-col">
+                    <div class="cardImages" style="background-image: url(https://source.unsplash.com/-YHSwy6uqvk/300x160)">
+                    </div>
+                    <div class="pt-5">
+                      <h1 class="text-base text-primary font-montserrat font-medium">Chef John's Turkey Sloppy Joes</h1>
+                    </div>
+                    <div class="flex flex-row pt-3 items-center justify-between">
+                      <div class="flex flex-row gap-1 items-center">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <div class="font-montserrat font-normal text-xs text-primary">
+                          <span>5.0</span>
+                          <span>(73)</span>
+                        </div>
+                      </div>
+                      <div class="font-montserrat font-normal text-xs text-primary">
+                        <span>by John Keller</span>
+                      </div>
+                    </div>
+                </div>
+              </a>
+
+              <a href="recipe.html">
+                <div class="flex flex-col">
+                    <div class="cardImages" style="background-image: url(https://source.unsplash.com/-YHSwy6uqvk/300x160)">
+                    </div>
+                    <div class="pt-5">
+                      <h1 class="text-base text-primary font-montserrat font-medium">Chef John's Turkey Sloppy Joes</h1>
+                    </div>
+                    <div class="flex flex-row pt-3 items-center justify-between">
+                      <div class="flex flex-row gap-1 items-center">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <div class="font-montserrat font-normal text-xs text-primary">
+                          <span>5.0</span>
+                          <span>(73)</span>
+                        </div>
+                      </div>
+                      <div class="font-montserrat font-normal text-xs text-primary">
+                        <span>by John Keller</span>
+                      </div>
+                    </div>
+                </div>
+              </a>
+
+              <a href="recipe.html">
+                <div class="flex flex-col">
+                    <div class="cardImages" style="background-image: url(https://source.unsplash.com/-YHSwy6uqvk/300x160)">
+                    </div>
+                    <div class="pt-5">
+                      <h1 class="text-base text-primary font-montserrat font-medium">Chef John's Turkey Sloppy Joes</h1>
+                    </div>
+                    <div class="flex flex-row pt-3 items-center justify-between">
+                      <div class="flex flex-row gap-1 items-center">
+                        <i class="ri-star-fill text-yellow-400"></i>
+                        <div class="font-montserrat font-normal text-xs text-primary">
+                          <span>5.0</span>
+                          <span>(73)</span>
+                        </div>
+                      </div>
+                      <div class="font-montserrat font-normal text-xs text-primary">
+                        <span>by John Keller</span>
+                      </div>
+                    </div>
+                </div>
+              </a>
+
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <!--~~~~~~~~~~~~~~~ Video content ~~~~~~~~~~~~~~~-->
+    <section>
+      <div class="mx-auto py-4 max-w-7xl px-10">
+        <div class="flex flex-row justify-between w-full">
+            <h1 class="font-montserrat font-semibold text-3xl text-black">Video</h1>
+            <div>
+              <button class="text-white bg-secondary font-medium rounded-full font-montserrat text-sm px-4 py-2 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">Featured<i class="ri-expand-up-down-fill"></i></button>
+              <div class="hidden bg-secondary text-base list-none divide-y rounded shadow my-4" id="dropdown">
+                  <ul class="py-1" aria-labelledby="dropdown">
+                  <li>
+                      <a href="#" class="text-sm text-white block px-4 py-2">Short by: Trending</a>
+                  </li>
+                  <li>
+                      <a href="#" class="text-sm text-white block px-4 py-2">Short by: Top Rated</a>
+                  </li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 mt-5 gap-10 ">
+          <a href="recipe.html">
+            <div class="bg-cover bg-center object-cover w-full lg:h-96 md:h-52 rounded-2xl top-0 left-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-700" style="background-image: url(/dist/img/dessert.jpg)">
+              <div class="flex h-full w-full items-center justify-center">
+                <button class="w-24 h-24 border-neutral-200 border-4 rounded-full focus:outline-none" onclick="play();"><i class="fa fa-play fa-2x text-secondary" id="play-btn"></i></button>
+              </div>
+            </div>
+          </a>
+
+          <a href="recipe.html">
+            <div class="bg-cover bg-center object-cover w-full lg:h-96 md:h-52 rounded-2xl top-0 left-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-700" style="background-image: url(/dist/img/dessert.jpg)">
+              <div class="flex h-full w-full items-center justify-center">
+                <button class="w-24 h-24 border-neutral-200 border-4 rounded-full focus:outline-none" onclick="play();"><i class="fa fa-play fa-2x text-secondary" id="play-btn"></i></button>
+              </div>
+            </div>
+          </a>
+
+          <a href="recipe.html">
+            <div class="bg-cover bg-center object-cover w-full lg:h-96 md:h-52 rounded-2xl top-0 left-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-700" style="background-image: url(/dist/img/dessert.jpg)">
+              <div class="flex h-full w-full items-center justify-center">
+                <button class="w-24 h-24 border-neutral-200 border-4 rounded-full focus:outline-none" onclick="play();"><i class="fa fa-play fa-2x text-secondary" id="play-btn"></i></button>
+              </div>
+            </div>
+          </a>
+            
+          <a href="recipe.html">
+            <div class="bg-cover bg-center object-cover w-full lg:h-96 md:h-52 rounded-2xl top-0 left-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-700" style="background-image: url(/dist/img/dessert.jpg)">
+              <div class="flex h-full w-full items-center justify-center">
+                <button class="w-24 h-24 border-neutral-200 border-4 rounded-full focus:outline-none" onclick="play();"><i class="fa fa-play fa-2x text-secondary" id="play-btn"></i></button>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--~~~~~~~~~~~~~~~ Subscribe ~~~~~~~~~~~~~~~-->
+    <section>
+      <div class="mx-auto py-4 max-w-7xl px-10">
+        <div class="bg-secondary mt-5 py-8 md:py-16 rounded-3xl">
+          <div class="w-[90%] md:w-[65%] mx-auto items-center justify-center">
+            <div>
+              <h1 class="text-center text-3xl text-white font-montserrat font-semibold">Be the first to know about the latest deals, receive new trending recipes & more!</h1>
+            </div>
+            <div class="mt-8 mx-auto w-full items-center justify-center">
+              <form target="#" class="flex flex-col md:flex-row mx-auto w-full gap-5 items-center justify-center" aria-labelledby="newsletter-headline">
+                  <input aria-label="Email address" type="email" required="" class="w-full px-5 py-3 text-base text-white font-montserrat font-normal placeholder-white bg-transparent border-2 border-white rounded-full" placeholder="Enter your email">
+                  <div class="rounded-full mt-0 flex-shrink-0 lg:ml-10">
+                      <button type="submit" class="flex items-center justify-center w-full px-5 py-3 text-base font-normal text-primary font-montserrat bg-yellow-500 rounded-full">Subscribe</button>
+                  </div>
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer>
+    <div class="mx-auto py-4 max-w-7xl px-10 mb-5">
+      <div class="flex flex-col gap-5 md:flex-row justify-between mt-5 w-full">
+        <div>
+          <a href="#" class="text-2xl font-leckerli text-secondary">Cooking Recipes</a>
+        </div>
+        <div class="flex flex-row">
+          <div class="items-center justify-center w-full">
+            <i class="ri-facebook-line ri-lg text-center text-blue-900 border-2 w-10 h-10 p-1 border-blue-900 hover:bg-blue-900 hover:text-white rounded-full"></i>
+            <i class="ri-instagram-line ri-lg text-center mx-5 text-pink-500 border-2 w-10 h-10 p-1 border-pink-500 hover:bg-pink-500 hover:text-white rounded-full"></i>
+            <i class="ri-twitter-x-line ri-lg text-center text-gray-950 border-2 w-10 h-10 p-1 border-gray-950 hover:bg-gray-950 hover:text-white rounded-full"></i>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-4 w-full md:grid-cols-2 gap-10 mt-5">
+        <ul class="flex flex-col gap-3 cursor-pointer">
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Presentations</li>
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Professionals</li>
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Stores</li>
+        </ul>
+
+        <ul class="flex flex-col gap-3 cursor-pointer">
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Webinars</li>
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Workshops</li>
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Local Meetups</li>
+        </ul>
+
+        <ul class="flex flex-col gap-3 cursor-pointer">
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Our Initiatives</li>
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Giving Back</li>
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Communities</li>
+        </ul>
+
+        <ul class="flex flex-col gap-3 cursor-pointer">
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Contact Form</li>
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Work With Us</li>
+          <li class="text-black hover:text-gray-500 text-sm font-montserrat font-medium">Visit Us</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
   <script>
-    
+    let items = document.querySelectorAll('#accordion .item');
+
+    items.forEach((item) => {
+        item.addEventListener('click',(e)=>{
+          // remove active class from all items
+          items.forEach((header) => {
+            header.closest(".item").classList.remove("active");
+          });
+
+          // this active class from all items
+          e.currentTarget.closest('.item').classList.toggle("active");
+        })
+    });
   </script>
+  <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
 </body>
 </html>
